@@ -1,4 +1,4 @@
-# Company & Project Management Process
+# Roles
 
 - Marketing, SEO, sale services
 - Accounting and financing
