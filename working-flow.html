@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Vietnam Information Technology Solution</title>
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link href="./assets/working-flow.css" rel="stylesheet">
+</head>
+<body>
+  <section class="root">
+    <figure>
+      <img src="./designs/ITS.favicon.png" alt="">
+      <figcaption>
+        <h4>VietnamITS</h4>
+        <h2>Working Process</h2>
+      </figcaption>
+    </figure>
+    <div id="progress" class="order-track">
+    </div>
+  </section>
+  <script>
+    var steps = [
+      1,
+      2,
+      3
+    ]
+    steps = steps.map(step => {
+      return `
+        <div class="order-track-step">
+          <div class="order-track-status">
+            <span class="order-track-status-dot"></span>
+            <span class="order-track-status-line"></span>
+          </div>
+          <div class="order-track-text">
+            <p class="order-track-text-stat">${step}</p>
+            <span class="order-track-text-sub"></span>
+          </div>
+        </div>
+      `;
+    })
+    document.getElementById('progress').innerHTML = steps.toString();
+  </script>
+</body>
+</html>
