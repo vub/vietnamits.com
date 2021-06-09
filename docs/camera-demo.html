@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+  <device type="media" onchange="update(this.data)"></device>
+  <video autoplay></video>
+  <script>
+    function hasGetUserMedia() {
+  return !!(navigator.mediaDevices && navigator.mediaDevices.getUserMedia);
+    }
+    if (hasGetUserMedia()) {
+      // Good to go!
+    } else {
+      alert("getUserMedia() is not supported by your browser");
+    }
+
+
+    function update(stream) {
+      document.querySelector('video').src = stream.url;
+    }
+  </script>
+</body>
+</html>
